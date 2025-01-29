@@ -1,0 +1,13 @@
+To add a new document Key in Entrust.
+1)	open Resources\Files\DocumentKeys_TEMPLATE.json  (this is essentially a backup of existing records with no data filled in)
+	add a new template record as (this is more to keep track of what is already there)
+	DO NOT OVER-WRITE any existing keys.
+	copy that record to notepad and update with correct file_format (X12, EDIFACT, SPS_RSX_XML, TRUECOMMERCE_XML, REDTAIL_XML)
+	add each of the new records to the end of DocumentKeys.json, save them.
+
+2)  Run the .exe for the document key helper.selecet the DocumentKeys.json file
+    this will generate keys and encoding for the new file.  and backup the old keys.
+
+3)  Add document type record to esi_core.ESI_DOCUMENT_TYPE
+
+4)  Add GUID data for new documents to EsiDcoumentFileFormat.cs
